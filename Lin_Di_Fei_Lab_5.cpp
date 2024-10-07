@@ -30,19 +30,25 @@ int main(){
     cin>>transactionMoney;
 
     if (typeTransaction == "debit"){ // if debit subtraction 
+
         cout<<fixed<<showpoint;
         cout<<setprecision(2);
+
         cout<<"New Account balance: $" <<moneyTotal-transactionMoney<<endl;
         moneyTotal = moneyTotal-transactionMoney;
+        
         amountTransaction = amountTransaction - 1;//deducts one from the amount of transactions left 
         debit = debit + transactionMoney;// totals the debit deduction amount 
     }
 
     else {
+
         cout<<fixed<<showpoint;
         cout<<setprecision(2);
+
         cout<<"New Account balance: $" <<moneyTotal+transactionMoney<<endl;// if credit addition 
         moneyTotal = moneyTotal+transactionMoney;//adds to the amount money left 
+
         amountTransaction = amountTransaction - 1;//deducts one from te amount fo transactions left 
         credit = credit+transactionMoney;//totals the debit deduction amount 
     }
